@@ -198,11 +198,7 @@
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-8px); }
     }
-    .welcome-msg h2 {
-      font-family: 'Syne', sans-serif;
-      font-size: 20px;
-      font-weight: 700;
-    }
+    .welcome-msg h2 { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 700; }
     .welcome-msg p { color: var(--muted); font-size: 13px; line-height: 1.6; max-width: 260px; }
     .suggestion-chips { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 8px; }
     .chip {
@@ -214,12 +210,7 @@
       font-size: 12px;
       cursor: pointer;
     }
-    .message {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      animation: msgIn 0.3s ease;
-    }
+    .message { display: flex; flex-direction: column; gap: 8px; animation: msgIn 0.3s ease; }
     @keyframes msgIn {
       from { opacity: 0; transform: translateY(12px); }
       to { opacity: 1; transform: translateY(0); }
@@ -368,9 +359,9 @@
     <div class="logo">DreamGen</div>
     <div style="display:flex;gap:8px;align-items:center;">
       <select class="model-select" id="modelSelect">
-        <option value="stabilityai/stable-diffusion-2-1">SD 2.1</option>
-        <option value="runwayml/stable-diffusion-v1-5">SD 1.5</option>
-        <option value="stabilityai/stable-diffusion-xl-base-1.0">SDXL</option>
+        <option value="black-forest-labs/FLUX.1-schnell">FLUX Schnell</option>
+        <option value="black-forest-labs/FLUX.1-dev">FLUX Dev</option>
+        <option value="stabilityai/sdxl-turbo">SDXL Turbo</option>
       </select>
       <button class="settings-btn" onclick="resetToken()">⚙️</button>
     </div>
@@ -396,7 +387,7 @@
         onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
       <button class="send-btn" id="sendBtn" onclick="generateImage()">➤</button>
     </div>
-    <div class="input-hint">Powered by Stable Diffusion · Hugging Face</div>
+    <div class="input-hint">Powered by FLUX · Hugging Face</div>
   </div>
 
 <script>
@@ -539,4 +530,4 @@
   }
 </script>
 </body>
-      </html>
+  </html>
